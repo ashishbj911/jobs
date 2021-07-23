@@ -28,7 +28,6 @@ const Singlejob = () => {
     location: { city },
     typeOfEmployment:{label},
     jobAd:{sections:{jobDescription:{title,text}}},
-    company:{name : compname}
   } = job;
   return (
     <div className="job-single">
