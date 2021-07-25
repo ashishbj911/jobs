@@ -14,8 +14,8 @@ export const Home = () => {
    }
     return (
       <div className="jobs-list">
+        <h1 className="main-head">Current Openings</h1>
         <div className="jobs-main">
-        <h1>Current Openings</h1>
         {jobs.map((item) => {
         return <Jobs key={item.id} {...item}></Jobs>;
            })}

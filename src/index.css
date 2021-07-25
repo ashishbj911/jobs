@@ -66,7 +66,10 @@ body {
 .job-main-info * {
   font-weight: normal;
 }
-
+.main-head{
+  margin: 0 0 30px;
+  text-align: center;
+}
 @media(max-width:767px){
   .jobs-main {
     padding:20px;
