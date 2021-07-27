@@ -10,7 +10,7 @@ const Jobs = ({id,name,label,city}) => {
           <p>{label}</p>
           <h5>{city}</h5>
           <Link to={`/jobs/${id}`}>View Details</Link>
-          <button onClick={addClass}></button>
+          <button onClick={addClass}>text</button>
        </article>
    )
 }
