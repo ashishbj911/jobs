@@ -6,7 +6,6 @@ import {
   SINGLE_JOB_ERROR,
   SINGLE_JOB_LOADING,
   SINGLE_JOB_SUCCESS,
-  ADD_CLASS,
 } from "./actions";
 import { JobsReducer } from "./reducer";
 
@@ -50,12 +49,8 @@ export const JobProvider = ({ children }) => {
   useEffect(() => {
     fetchJobs(url);
   }, []);
-
-  const addClass = () => {
-    dispatch({ type: ADD_CLASS });
-  }
   return (
-    <JobContext.Provider value={{ ...state,fetchSingle,addClass }}>{children}</JobContext.Provider>
+    <JobContext.Provider value={{ ...state,fetchSingle }}>{children}</JobContext.Provider>
   );
 };
 
