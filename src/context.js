@@ -6,6 +6,7 @@ import {
   SINGLE_JOB_ERROR,
   SINGLE_JOB_LOADING,
   SINGLE_JOB_SUCCESS,
+  ADD_CLASS,
 } from "./actions";
 import { JobsReducer } from "./reducer";
 
@@ -18,6 +19,7 @@ const initialState = {
   single_loading:true,
   single_error:false,
   single_job:{},
+  ashish:false,
 };
 
 const JobContext = React.createContext();
@@ -48,8 +50,12 @@ export const JobProvider = ({ children }) => {
   useEffect(() => {
     fetchJobs(url);
   }, []);
+
+  const addClass = () => {
+    dispatch({ type: ADD_CLASS });
+  }
   return (
-    <JobContext.Provider value={{ ...state,fetchSingle }}>{children}</JobContext.Provider>
+    <JobContext.Provider value={{ ...state,fetchSingle,addClass }}>{children}</JobContext.Provider>
   );
 };
 

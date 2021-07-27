@@ -5,6 +5,7 @@ import {
   SINGLE_JOB_LOADING,
   SINGLE_JOB_ERROR,
   SINGLE_JOB_SUCCESS,
+  ADD_CLASS
 } from "./actions";
 
 export const JobsReducer = (state, action) => {
@@ -35,5 +36,8 @@ export const JobsReducer = (state, action) => {
   }
   if (action.type === SINGLE_JOB_ERROR) {
     return { ...state, single_loading: false, single_error: true };
+  }
+  if (action.type === ADD_CLASS) {
+    return { ...state, ashish: true };
   }
 };
